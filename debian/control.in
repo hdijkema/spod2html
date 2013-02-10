@@ -1,0 +1,15 @@
+Source: elementals
+Section: devel
+Priority: extra
+Maintainer: Hans Oesterholt (Lives in the Netherlands) <debian@oesterholt.net>
+Build-Depends: debhelper (>= 7.0.0), %%BUILDDEPENDS%%
+Standards-Version: 3.9.2
+Homepage: http://hoesterholt.github.com/elementals/
+Vcs-Git: git://github.com/hoesterholt/elementals.git
+Vcs-Browser: https://github.com/hoesterholt/elementals
+
+Package: elementals
+Architecture: any
+Depends: %%DEPENDS%%
+Description: library with elemental C stuff
+ library with elemental C stuff
