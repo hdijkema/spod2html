@@ -1,15 +1,15 @@
-Source: elementals
+Source: spod2html
 Section: devel
 Priority: extra
 Maintainer: Hans Oesterholt (Lives in the Netherlands) <debian@oesterholt.net>
 Build-Depends: debhelper (>= 7.0.0), %%BUILDDEPENDS%%
 Standards-Version: 3.9.2
-Homepage: http://hoesterholt.github.com/elementals/
-Vcs-Git: git://github.com/hoesterholt/elementals.git
-Vcs-Browser: https://github.com/hoesterholt/elementals
+Homepage: http://hoesterholt.github.com/spod2html/
+Vcs-Git: git://github.com/hoesterholt/spod2html.git
+Vcs-Browser: https://github.com/hoesterholt/spod2html
 
-Package: elementals
+Package: spod2html
 Architecture: any
 Depends: %%DEPENDS%%
-Description: library with elemental C stuff
- library with elemental C stuff
+Description: An advanced POD 2 HTML converter
+ An advanced POD 2 HTML converter
