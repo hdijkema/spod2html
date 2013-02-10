@@ -1,0 +1,800 @@
+
+/*
+  This is an commented example on how to use ewikis` CSS class names. Note
+  that everything here starts with ".wiki" and NOT ".ewiki"!
+   
+*/
+
+.spodwiki {
+	width: auto;
+	font-family: arial,sans-serif;
+	font-size: small;
+}
+
+.spodwiki .actions {
+	background-color: #808080;
+	font-size: 100%;
+	color: orange;
+	border-width: thick;
+	padding-bottom: 5px;
+}
+
+.spodwiki .actions A:link {
+	color: orange;
+}
+
+.spodwiki .actions A:visited {
+	color: orange;
+}
+
+.spodwiki .actions H1 {
+	font-size: 100%;
+	color: orange;
+	background-color: #808080;
+	text-indent: 10px;
+	padding-top: 5px;
+}
+
+.spodwiki .actions .info {
+	font-size: 70%;
+	text-align: right;
+	padding-top: 5px;
+	padding-right:10px;
+	color: orange;
+}
+
+.spodwiki .actions .links {
+	padding-top: 5px;
+	text-indent: 10px;
+}
+
+.spodwiki .actions .backlinks {
+	padding-top: 5px;
+	text-indent: 10px;
+	font-size: 70%;
+}
+
+.spodwiki .actions .backlinks A:link {
+	color: white;
+}
+
+.spodwiki .actions .backlinks A:visited {
+	color: white;
+}
+
+.spodwiki_ta {
+	font-family: arial,sans-serif;
+	font-size: small;
+}
+
+.menu {
+	font-family: arial,sans-serif;
+	font-size: small;
+}
+
+.menu H2 {
+	font-size: 120%;
+}
+
+.menu .items {
+	font-size: 80%;
+}
+
+.menu .items A {
+  	color: #008866;
+}
+
+
+/* ----------------------------------------------
+  every page that comes thru
+  ewiki is wrapped into:
+*/
+
+.wiki  {
+   background: url("wikibg.png") repeat-y;
+   font-family: arial,sans-serif;
+   font-size: small
+}
+
+
+/* ----------------------------------------------
+  then you can select on $actions
+  or even page names
+*/
+
+
+.wiki.edit {
+}
+
+.wiki.info {
+}
+
+.wiki.view.PageIndex {			/* "PageIndex" when "view"ed */
+   background-color: #ffee55;
+}
+
+.wiki.SiteOverview {			/* "SiteOverview" regardless of $action */
+   font-family: "Lucida Bright";
+}
+
+
+
+/* -----------------------------------------------
+  every page has a title now, always <h2>,
+  some of them enclose links (when "view"ed)
+*/
+.wiki h2.page.title {
+   color: red;
+   border-bottom: 2px #eedddd solid;
+}
+
+.wiki h2.page.title a {
+   color: #5555cc;
+   text-decoration: none;
+}
+
+
+/* -----------------------------------------------
+  the ".action-links" or ".control-links" are the
+  list of links below every wiki page ('PageInfo'
+  and 'EditThisPage' ...)
+*/
+.wiki.view .action-links {
+   background-color: #888888;
+   border: dashed 4px #888888;
+}
+
+.wiki.view .action-links hr,  .wiki .action-links br {
+   display: none;
+}
+
+.wiki.view .action-links a {
+   color: #ffffff;
+}
+
+.wiki.view .action-links a:hover {
+   background: #151155;
+}
+
+
+/* -----------------------------------------------
+  the "info" pages result list is often
+  chunked into parts
+*/
+.wiki.info .chunked-result a {
+   text-decoration: underline;
+   background-color: #ddbb55;
+}
+
+
+/* -----------------------------------------------
+  the "edit" pages form elements are grouped
+*/
+.wiki.edit .edit-box {
+   /* usually encloses a textarea and two submit buttons */
+}
+
+.wiki.edit .edit-box textarea {
+   border: 2px solid #000000;
+   background-color: #ccccff;
+}
+
+.wiki.edit form[name=ewiki] {
+   /* old way, doesn't work with good old IE reliable */
+}
+
+.wiki.edit .image-upload {
+   background: url("image-upload.jpeg") no-repeat;
+}
+
+.wiki.edit .preview {
+   background-image: url("dashed.png");
+   font-size:50%;
+}
+
+
+/*
+  for the complete list of available class names
+  please always visit the README and the plugins
+  which also provide documentation of any such
+  features
+*/
+
+
+
+/* -----------------------------------------------
+  inside of rendered pages, there is only little
+  CSS, if you do not utilize plugins/markup_css
+  and create some of your own
+*/
+
+.wiki .indent {                   /* space-indentation */
+   margin-left: 5px;
+}
+
+.wiki em {
+  color:#331111;
+}
+
+.newestpages {
+  font-size: 80%;
+}
+
+.menu {
+  font-size: 80%
+}
+
+/*
+
+FONT,TD,BODY    {FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+A:link          {BACKGROUND: none; COLOR: #000000; TEXT-DECORATION: underline}
+A:active        {BACKGROUND: none; COLOR: #000000; TEXT-DECORATION: underline}
+A:visited       {BACKGROUND: none; COLOR: #000000; TEXT-DECORATION: underline}
+A:hover         {BACKGROUND: none; COLOR: #000000; TEXT-DECORATION: underline}
+.content        {BACKGROUND: none; COLOR: #000000;}
+.option         {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT:
+ bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+*/
+
+/* 
+   $Id: core.css,v 1.4 2004/08/31 09:55:03 cvs Exp $
+
+   Why invent the weel again?
+
+   This style sheet originates from cpan.org and has been extended
+   with various indent levels and has modified colours.
+*/
+
+BODY {
+  background: white;
+  color: black;
+  font-family: arial,sans-serif;
+  margin: 0;
+  padding: 1ex;
+}
+
+BODY H1 {
+	font-size: 100%;
+	color: orange;
+	background-color: grey;
+	text-indent: 10px;
+}
+
+TABLE {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 0;
+  color: inherit;
+}
+
+IMG { border: 0; }
+FORM { margin: 0; }
+input { margin: 2px; }
+
+A.fred {
+  text-decoration: none;
+}
+
+A:link, A:visited {
+  background: transparent;
+  color: #008855;
+}
+
+A[href="#POD_ERRORS"] {
+  background: transparent;
+  color: #FF0000;
+}
+
+TD {
+  margin: 0;
+  padding: 0;
+}
+
+DIV {
+  border-width: 0;
+}
+
+DT {
+  margin-top: 1em;
+}
+
+.credits TD {
+  padding: 0.5ex 2ex;
+}
+
+.huge {
+  font-size: 32pt;
+}
+
+.s {
+  background: #dddddd;
+  color: inherit;
+}
+
+.s TD, .r TD {
+  padding: 0.2ex 1ex;
+  vertical-align: baseline;
+}
+
+TH {
+  background: #bbbbbb;
+  color: inherit;
+  padding: 0.4ex 1ex;
+  text-align: left;
+}
+
+TH A:link, TH A:visited {
+  background: transparent;
+  color: black;
+}
+
+.box {
+  border: 1px solid #006699;
+  margin: 1ex 0;
+  padding: 0;
+}
+
+.distfiles TD {
+  padding: 0 2ex 0 0;
+  vertical-align: baseline;
+}
+
+.manifest TD {
+  padding: 0 1ex;
+  vertical-align: top;
+}
+
+.l1 {
+  font-weight: bold;
+}
+
+.l2 {
+  font-weight: normal;
+}
+
+.t1, .t2, .t3, .t4  {
+  background: #006699;
+  color: white;
+}
+.t4 {
+  padding: 0.2ex 0.4ex;
+}
+.t1, .t2, .t3  {
+  padding: 0.5ex 1ex;
+}
+
+/* IE does not support  .box>.t1  Grrr */
+.box .t1, .box .t2, .box .t3 {
+  margin: 0;
+}
+
+.t1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.t2 {
+  font-size: 1.0em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.t3 {
+  font-size: 1.0em;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* width: 100%; border: 0.1px solid #FFFFFF; */ /* NN4 hack */
+
+.datecell {
+  text-align: center;
+  width: 17em;
+}
+
+.cell {
+  padding: 0.2ex 1ex;
+  text-align: left;
+}
+
+.label {
+  background: #aaaaaa;
+  color: black;
+  font-weight: bold;
+  padding: 0.2ex 1ex;
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.categories {
+  border-bottom: 3px double #006699;
+  margin-bottom: 1ex;
+  padding-bottom: 1ex;
+}
+
+.categories TABLE {
+  margin: auto;
+}
+
+.categories TD {
+  padding: 0.5ex 1ex;
+  vertical-align: baseline;
+}
+
+.path A {
+  background: transparent;
+  color: #006699;
+  font-weight: bold;
+}
+
+.pages {
+  background: #dddddd;
+  color: #006699;
+  padding: 0.2ex 0.4ex;
+}
+
+.path {
+  background: #dddddd;
+  border-bottom: 1px solid #006699;
+  color: #006699;
+ /*  font-size: 1.4em;*/
+  margin: 1ex 0;
+  padding: 0.5ex 1ex;
+}
+
+.menubar TD {
+  background: #006699;
+  color: white;
+}
+
+.menubar {
+  background: #006699;
+  color: white;
+  margin: 1ex 0;
+  padding: 1px;
+}
+
+.menubar .links     {
+  background: transparent;
+  color: white;
+  padding: 0.2ex;
+  text-align: left;
+}
+
+.menubar .searchbar {
+  background: black;
+  color: black;
+  margin: 0px;
+  padding: 2px;
+  text-align: right;
+}
+
+A.m:link, A.m:visited {
+  background: #006699;
+  color: white;
+  font: bold 10pt Arial,Helvetica,sans-serif;
+text-decoration: none;
+}
+
+A.o:link, A.o:visited {
+  background: #006699;
+  color: #ccffcc;
+  font: bold 10pt Arial,Helvetica,sans-serif;
+text-decoration: none;
+}
+
+A.o:hover {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+A.m:hover {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+table.dlsip     {
+  background: #dddddd;
+  border: 0.4ex solid #dddddd;
+}
+
+.spod {
+	margin-right: auto;
+	margin-left: auto;
+	min-width: 550px;
+	max-width: 1000px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+  	background: white;
+  	color: black;
+  	font-family: arial,sans-serif;
+	font-size: small;
+}
+
+.spod .text {
+  /*float: right;*/
+  clear: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  /*width: 67%;*/
+  text-decoration: none;
+}
+
+.spod .referers {
+  font-size: 70%;
+  color: #808080;
+}
+
+.spod .referers TD {
+  font-size: 80%;
+  font-family: courier, Monospace; 
+  margin: 4px;
+  color: #808080;
+}
+
+.spod PRE     {
+  background: #eeeeee;
+  border: 1px solid #888888;
+  color: black;
+  padding: 1em;
+  white-space: pre;
+}
+
+.spod H1      {
+  background: transparent;
+  color: #008866;
+  font-size: x-large;
+  text-indent: 0px;
+}
+
+.spod H2      {
+  background: transparent;
+  color: #008866;
+  font-size: large;
+}
+
+.spod H3	{
+  background: transparent;
+  color: #000000;
+  font-size: medium;
+}
+
+.spod .itemindent {
+	margin-left: -1em;
+   margin-bottom: -0.5em;
+}
+.spod .itemcolor {
+	color: #205555;
+}
+
+.spod .indent1 {
+	margin-left: 1em;
+}
+
+.spod .indent2 {
+	margin-left: 2em;
+}
+
+.spod .indent3 {
+	margin-left: 3em;
+}
+
+.spod .indent4 {
+	margin-left: 4em;
+}
+
+.spod .indent5 {
+	margin-left: 5em;
+}
+
+.spod .indent6 {
+	margin-left: 6em;
+}
+
+.spod .indent7 {
+	margin-left: 7em;
+}
+
+
+.spod IMG     {
+  vertical-align: top;
+}
+
+.spod .header {
+  text-decoration: none;
+}
+
+.spod .toc {
+  float: left;
+  clear: none;
+  margin-top: 0px;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  /*width: 30%;*/
+}
+
+.spod .toc A  {
+  text-decoration: none;
+  font: small;
+}
+
+.spod .toc H1 {
+  background: transparent;
+  color: #008866;
+  font-size: 145%;
+}
+
+.spod .toc .indent1 {
+	margin-left: 1em;
+}
+
+.spod .toc .indent2 {
+	margin-left: 2em;
+}
+
+.spod .toc .indent3 {
+	margin-left: 3em;
+}
+
+.spod .toc .indent4 {
+	margin-left: 4em;
+}
+
+.spod .toc .indent5 {
+	margin-left: 5em;
+}
+
+.spod .toc .indent6 {
+	margin-left: 6em;
+}
+
+.spod .toc .indent7 {
+	margin-left: 7em;
+}
+
+.spod .toc LI {
+  line-height: 1.2em;
+  list-style-type: none;
+}
+
+.spod .text A {
+  text-decoration: none;
+}
+
+.spod .text PRE     {
+  background: #eeeeee;
+  border: 1px solid #888888;
+  color: black;
+  padding: 1em;
+  white-space: pre;
+  clear: both;
+}
+
+.spod .text CODE {
+    font-family: courier, Monospace; 
+	font-size: 10pt;
+}
+
+.spod .text H1      {
+  background: transparent;
+  color: #008866;
+  font-size: 145%;
+ /* font-size: x-large;*/
+}
+
+.spod .text H2      {
+  background: transparent;
+  color: #008866;
+  font-size: 125%;
+  /*font-size: large;*/
+}
+
+.spod .text H3	{
+  background: transparent;
+  color: #000000;
+  font-size: 110%;
+  /*font-size: medium;*/
+}
+
+.spod .text .itemindent {
+   margin-left: -1em;
+   margin-bottom: -0.5em;
+}
+.spod .text .itemcolor {
+	color: #205555;
+}
+
+.spod .text .indent1 {
+	margin-left: 1em;
+}
+
+.spod .text .indent2 {
+	margin-left: 2em;
+}
+
+.spod .text .indent3 {
+	margin-left: 3em;
+}
+
+.spod .text .indent4 {
+	margin-left: 4em;
+}
+
+.spod .text .indent5 {
+	margin-left: 5em;
+}
+
+.spod .text .indent6 {
+	margin-left: 6em;
+}
+
+.spod .text .indent7 {
+	margin-left: 7em;
+}
+
+
+.spod .text IMG     {
+  vertical-align: top;
+}
+
+.spod .text .header {
+  text-decoration: none;
+}
+
+.faq DT {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.chmenu {
+  background: black;
+  color: red;
+  font: bold 1.1em Arial,Helvetica,sans-serif;
+  margin: 1ex auto;
+  padding: 0.5ex;
+}
+
+.chmenu TD {
+  padding: 0.2ex 1ex;
+}
+
+.chmenu A:link, .chmenu A:visited  {
+  background: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.chmenu A:hover {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+.column {
+  padding: 0.5ex 1ex;
+  vertical-align: top;
+}
+
+.datebar {
+  margin: auto;
+  width: 14em;
+}
+
+.date {
+  background: transparent;
+  color: #008000;
+}
+
+.tiny {
+	font-size: 0.7em;
+}
+
