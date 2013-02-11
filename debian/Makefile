@@ -1,7 +1,7 @@
 VERSION=$(shell ./get_version.sh)
 MYDIST=$(shell cat /etc/lsb-release | grep CODENAME | sed -e 's/[^=]*[=]//')
-SUBVERSION=3
-PACKAGE=elementals
+SUBVERSION=1
+PACKAGE=spod2html
 DEPENDS=
 DEPENDS1=
 BUILDDEPENDS=automake,autoconf,intltool
@@ -10,7 +10,7 @@ DISTROS=precise
 #DISTROS=precise
 DISTROS1=maverick lucid
 DVERSION=${VERSION}.${DISTRO}.${SUBVERSION}
-UBUNTU=/tmp/elementals_ppa
+UBUNTU=/tmp/spod2html_ppa
 UDIR=${UBUNTU}/${PACKAGE}-${DVERSION}
 DDIR=${UDIR}/debian
 PPA=ppa:0k-hans-f8/ppa

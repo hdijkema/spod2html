@@ -1,0 +1,2 @@
+spod2html is a pod2html replacement.  Opposed to pod2html, it extends the POD language with tables and images and it supports syntax coloring (using enscript).
+
